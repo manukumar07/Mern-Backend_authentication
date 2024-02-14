@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './Signup.css';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
 
 const Signup = () => {
   const [user, setUser] = useState({
@@ -24,59 +24,59 @@ const Signup = () => {
   };
 
   // handle form on submit
-  const handleSubmit = async (e) => {
-    e.preventDefault(e);
-    console.log(user);
-  };
-//
-
-try {
-    const response = await fetch("http://localhost:5000/api/auth/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
-    console.log("response data : ", response);
-
-    if (response.ok) {
-      const responseData = await response.json();
-      alert("registration successful");
-      setUser({ username: "", email: "", phone: "", password: "" });
-      console.log(responseData);
-    } else {
-      console.log("error inside response ", "error");
-    }
-  } catch (error) {
-    console.error("Error", error);
-  }
-};
-//
-
-// const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const response = await axios.post("http://localhost:5000/api/auth/signup", user, {
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//       });
-
-//       console.log("response data: ", response);
-
-//       if (response.status === 200) {
-//         const responseData = response.data;
-//         alert("Registration successful");
-//         setUser({ username: "", email: "", phone: "", password: "" });
-//         console.log(responseData);
-//       } else {
-//         console.log("Error inside response");
-//       }
-//     } catch (error) {
-//       console.error("Error", error);
-//     }
+//   const handleSubmit = async (e) => {
+//     e.preventDefault(e);
+//     console.log(user);
 //   };
+// //
+
+// try {
+//     const response = await fetch("http://localhost:5000/api/auth/signup", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(user),
+//     });
+//     console.log("response data : ", response);
+
+//     if (response.ok) {
+//       const responseData = await response.json();
+//       alert("registration successful");
+//       setUser({ username: "", email: "", phone: "", password: "" });
+//       console.log(responseData);
+//     } else {
+//       console.log("error inside response ", "error");
+//     }
+//   } catch (error) {
+//     console.error("Error", error);
+//   }
+// };
+//
+
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/api/auth/signup", user, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      console.log("response data: ", response);
+
+      if (response.status === 200) {
+        const responseData = response.data;
+        alert("Registration successful");
+        setUser({ username: "", email: "", phone: "", password: "" });
+        console.log(responseData);
+      } else {
+        console.log("Error inside response");
+      }
+    } catch (error) {
+      console.error("Error", error);
+    }
+  };
 
   return (
     <div className="signup-container">

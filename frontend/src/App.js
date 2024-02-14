@@ -4,6 +4,7 @@ import Login from "./component/Auth/Login";
 import Notfound from "./component/Auth/Notfound"
 import Home from "./component/Pages/Home"
 import Signup from './component/Auth/Signup';
+import { Logout } from './component/Auth/Logout';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup/>} />
+        <Route path="/logout" element={<Logout/>} />
         <Route path="/*" element={<Notfound/>} />
       </Routes>
     </BrowserRouter>
