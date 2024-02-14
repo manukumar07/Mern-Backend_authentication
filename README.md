@@ -9,6 +9,7 @@ A full-stack web application demonstrating user authentication using the MERN st
 - User registration and login with secure password hashing
 - JSON Web Token (JWT) authentication for secure communication
 - Protected routes to restrict access to authenticated users
+- Logout functionality for ending user sessions
 - Responsive user interface for a seamless experience across devices
 
 ## Technologies Used
