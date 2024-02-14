@@ -1,0 +1,86 @@
+/* Login.css */
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* background-image: url('/b1login.png'); Replace 'your-image-url.jpg' with the path to your image */
+    /* background-size: cover;
+    background-position: center; */
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-login {
+    display: flex;
+    flex-direction: column;
+    width:300px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    font-weight:700
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  } */
+  button {
+    background-color: black;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    opacity: 1; 
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    color :White;
+    font-weight:500;
+  }
+  
+  
+  p {
+    margin-top: 15px;
+    text-align: center;
+    color: #666;
+  }
+  
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+ 

@@ -1,0 +1,52 @@
+/* Notfound.css */
+
+#error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    width:100%;
+  }
+  
+  .content {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    font-size: 6em;
+    margin: 0;
+    color: #dc3545;
+  }
+  
+  h4 {
+    margin-top: 0.5em;
+    color: #495057;
+  }
+  
+  p {
+    color: #6c757d;
+  }
+  
+  .btns {
+    margin-top: 20px;
+  }
+  
+  .btns a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
+  }
+  
+  .btns a:hover {
+    background-color: #0056b3;
+  }
+  
