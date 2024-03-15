@@ -1,5 +1,4 @@
 
-Copy code
 # MERN Authentication
 
 A full-stack web application demonstrating user authentication using the MERN stack.
