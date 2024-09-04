@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
-const DB =
-  "mongodb+srv://palmanukumar53:NuMLQ8f5pdHscg4Z@cluster0.2hu91.mongodb.net/";
+const DB = "";
 
 const connectDb = async () => {
   try {
