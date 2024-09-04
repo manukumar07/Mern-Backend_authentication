@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // import axios from 'axios';
 import "./Login.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -26,7 +28,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("http://localhost:8000/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +39,7 @@ const Login = () => {
       if (response.ok) {
         const responseData = await response.json();
         console.log("after login: ", responseData);
-        // toast.success("Registration Successful");
+        toast.success("Registration Successful");
         // saveTokenInLocalStr(responseData.token);
         navigate("/");
       }

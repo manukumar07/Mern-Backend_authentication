@@ -1,17 +1,16 @@
-
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const router = require("./routes/auth-route"); // Adjust the path accordingly
-const connectDb =require ("./config/db")
+const connectDb = require("./config/db");
 
 dotenv.config();
 
 const app = express();
 
-const PORT = process.env.PORT || 5000; // define port number
+const PORT = 8000; // define port number
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -26,10 +25,12 @@ app.use((err, req, res, next) => {
 });
 //
 
-connectDb().then(() => {
+connectDb()
+  .then(() => {
     app.listen(PORT, () => {
       console.log(`server is running at port: ${PORT}`);
     });
-  }).catch((error) => {
+  })
+  .catch((error) => {
     console.error("Error connecting to the database:", error);
- });
+  });
